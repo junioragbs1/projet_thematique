@@ -1,0 +1,28 @@
+@media (min-width: 328px) and (max-width: 767px) {
+  .Destinations,
+  .place_toBe {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    margin-left: 100px;
+    row-gap: 1em;
+  }
+  .activites {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    margin-left: 133px;
+    row-gap: 2em;
+  }
+
+  .pieds {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 1em;
+    align-items: center;
+    text-align: center;
+  }
+}

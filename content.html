@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/9dafe03bf9.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Pour inserer les icones de reseaux sociaux -->
+    <script src="JS/app.js" defer></script>
+    <!-- Lien pour le modal -->
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/responsive.css" />
+    <title>Destinations & Activités</title>
+  </head>
+  <body>
+    <header class="entete">
+      <div class="aceuil">
+        <h1><a href="index.html" id="retour_acceuil">AfriKama</a></h1>
+      </div>
+      <div class="nav">
+        <a href="content.html" class="nav_link"> Destinations </a>
+        <a href="contact.html" class="nav_link"> Contacts </a>
+        <a href="#modal1" class="js_modal"> Reserver votre appel gratuit </a>
+        <!-- j'ai appliquer une class qui fait le lien avec le JS pour le modal -->
+      </div>
+    </header>
+    <h2>Nos destinations populaires :</h2>
+    <div class="Destinations">
+      <!-- Tanzanie -->
+      <div class="tanzanie">
+        <img src="imgs/drapeau-de-la-tanzanie.jpg" alt="image_tanzanie" />
+        <p>
+          La Tanzanie est un pays d'Afrique de l'Est, connu pour sa richesse
+          naturelle, sa diversité culturelle et ses paysages spectaculaires.
+        </p>
+      </div>
+      <!-- Kenya -->
+      <div class="Kenya">
+        <img src="imgs/kenya.jpg" alt="image_kenya" />
+        <p>
+          Le Kenya est un pays d’Afrique de l’Est avec des animaux sauvages et
+          des plages.
+        </p>
+      </div>
+      <!-- Égypte -->
+      <div class="egypte">
+        <img src="imgs/egypte.jpg" alt="image_egypte" />
+        <p>
+          L’Égypte est célèbre pour ses trésors antiques, comme les pyramides ,
+          le Sphinx et la vallée des Rois. Les touristes visitent Le Caire,
+          Louxor, Assouan, et profitent d’une croisière sur le Nil. C’est un
+          pays riche en histoire et en culture.
+        </p>
+      </div>
+    </div>
+    <h2>Explorez par pays :</h2>
+    <div class="place_toBe">
+      <!-- Afrique du sud -->
+      <div class="afrique_du_sud">
+        <img src="imgs/Flag_of_South_Africa.svg.png" alt="afrique_du_sud" />
+        <p>
+          L’Afrique du Sud est un pays d’Afrique australe très apprécié des
+          touristes pour ses paysages variés, ses safaris dans le parc Kruger,
+          ses plages, ses montagnes et sa richesse culturelle.
+        </p>
+      </div>
+      <!-- Togo -->
+      <div class="togo">
+        <img src="imgs/Flag_of_Togo.svg.png" alt="image_togo" />
+        <p>
+          Le Togo est un petit pays d’Afrique de l’Ouest offrant de belles
+          plages, des paysages variés et une culture vivante. Les visiteurs
+          peuvent découvrir Lomé, des marchés colorés, des villages
+          traditionnels.
+        </p>
+      </div>
+      <!-- Maroc -->
+      <div class="maroc">
+        <img src="imgs/maroc.png" alt="image_maroc" />
+        <p>
+          Le Maroc est un pays d’Afrique du Nord très touristique, connu pour
+          ses villes impériales, le désert du Sahara, les plages et la chaîne de
+          l’Atlas. On y découvre une culture mêlant traditions arabes et
+          berbères.
+        </p>
+      </div>
+    </div>
+    <h2>Les activites qui vous sont proposés :</h2>
+    <div class="activites">
+      <div class="activite1">
+        <img src="imgs/aqua.png" alt="Activités1" />
+        <h3>Les activités aquatiques :</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.Expedita qui
+          laborum architecto unde ut sit blanditis.
+        </p>
+      </div>
+
+      <div class="activite2">
+        <img src="imgs/desert.png" alt="Activités2" />
+        <h3>Les activités desertiques :</h3>
+
+        <p>
+          lodipisci repudiandae corrupti impedit perspiciatis corporis,
+          provident cupiditate iusto iure vitae reprehenderit, tenetur enim
+          voluptate.
+        </p>
+      </div>
+
+      <div class="activite3">
+        <img src="imgs/cuisine.png" alt="Activités3" />
+        <h3>La cuisine africaines :</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi ex
+          odit quos dolorum accusantium dolorem .
+        </p>
+      </div>
+    </div>
+    <hr />
+
+    <footer class="pieds">
+      <div class="infos">
+        <p>
+          <strong>Tel:</strong> +44.77.34.23.89
+          <strong>Email:</strong> AfriKama@infos.com
+        </p>
+      </div>
+      <div class="rs">
+        <a href="https://www.facebook.com/">
+          <i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://www.linkedin.com"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+        <a href="https://www.youtube.com"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+      </div>
+      <div class="afterfooter">
+        <p>Terms of use | Coockies | Privacy policy</p>
+      </div>
+    </footer>
+
+    <section
+      id="modal1"
+      class="modal"
+      role="dialog"
+      aria-labelledby="titlemodal"
+      style="display: none"
+    >
+      <!-- la section qui s'afficher au clix du lien -->
+      <div class="modal_wrapper">
+        <!--c'est ici on mets le contenu du modal , la boite de dialigue  -->
+        <h2 id="titlemodal">Ons rekening fransche</h2>
+        <button class="close_modal">fermer le modal</button>
+
+        <p>
+          Kosten zoo mee sunger heb are varens. Arbeiden baksteen gesloten rug
+          zoo mijnbouw zes massa na zeker. Herhaling zuidgrens te al opgevoerd
+          nu mineralen er.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt iusto
+          exercitationem voluptatibus modi quae. Soluta, sit, expedita ducimus
+          consectetur odio quam illum quas corporis, provident totam impedit
+          voluptatibus officiis temporibus.
+        </p>
+        <input type="search" />
+      </div>
+    </section>
+  </body>
+</html>

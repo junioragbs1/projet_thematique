@@ -1,0 +1,71 @@
+/* Format tablette ( 768px - 1023px) pour la page content */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .entete {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    margin: 2px;
+  }
+  h2 {
+    margin: 12px;
+  }
+
+  .aceuil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav {
+    display: flex;
+    justify-content: center;
+  }
+  a,
+  h1 {
+    color: white;
+    text-decoration: none;
+    padding: 3px;
+  }
+  .Destinations,
+  .place_toBe {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    margin-left: 100px;
+    row-gap: 1em;
+  }
+  .activites {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    margin-left: 133px;
+    row-gap: 2em;
+  }
+
+  .pieds {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 1em;
+    align-items: center;
+    text-align: center;
+  }
+  img {
+    margin-bottom: 1em;
+  }
+
+  /******************/
+
+  .des_home {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+}
