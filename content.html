@@ -7,8 +7,8 @@
       src="https://kit.fontawesome.com/9dafe03bf9.js"
       crossorigin="anonymous"
     ></script>
+    <script src="/JS/app.js" defer></script>
     <!-- Pour inserer les icones de reseaux sociaux -->
-    <script src="JS/app.js" defer></script>
     <!-- Lien pour le modal -->
     <link rel="stylesheet" href="/CSS/style.css" />
     <link rel="stylesheet" href="/CSS/responsive.css" />
@@ -22,7 +22,6 @@
       <div class="nav">
         <a href="content.html" class="nav_link"> Destinations </a>
         <a href="contact.html" class="nav_link"> Contacts </a>
-        <a href="#modal1" class="js_modal"> Reserver votre appel gratuit </a>
         <!-- j'ai appliquer une class qui fait le lien avec le JS pour le modal -->
       </div>
     </header>
@@ -31,6 +30,8 @@
       <!-- Tanzanie -->
       <div class="tanzanie">
         <img src="imgs/drapeau-de-la-tanzanie.jpg" alt="image_tanzanie" />
+        <!-- on mets l'image dans le lien où on va cliquer , avec le href on le lie a la section du modal . la class js modal , on va s'en servir pour le lien avec le JS   -->
+
         <p>
           La Tanzanie est un pays d'Afrique de l'Est, connu pour sa richesse
           naturelle, sa diversité culturelle et ses paysages spectaculaires.
@@ -99,9 +100,11 @@
       </div>
 
       <div class="activite2">
-        <img src="imgs/desert.png" alt="Activités2" />
         <h3>Les activités desertiques :</h3>
-
+        <a href="#modal_activité" class="ouvrir_modal">
+          <img src="imgs/desert.png" alt="Activités2"
+        /></a>
+        <!-- Je dis que c'est sur cet image que l'on doit appuyer pour ouvrir le modal -->
         <p>
           lodipisci repudiandae corrupti impedit perspiciatis corporis,
           provident cupiditate iusto iure vitae reprehenderit, tenetur enim
@@ -142,32 +145,41 @@
         <p>Terms of use | Coockies | Privacy policy</p>
       </div>
     </footer>
-
+    <!-- je creer un id et une class a mon modal qui va me permettre de l'appeler dans mon js-->
     <section
-      id="modal1"
-      class="modal"
+      id="mon_modal"
+      class="mon_modal"
       role="dialog"
       aria-labelledby="titlemodal"
-      style="display: none"
     >
-      <!-- la section qui s'afficher au clix du lien -->
-      <div class="modal_wrapper">
-        <!--c'est ici on mets le contenu du modal , la boite de dialigue  -->
-        <h2 id="titlemodal">Ons rekening fransche</h2>
-        <button class="close_modal">fermer le modal</button>
-
-        <p>
-          Kosten zoo mee sunger heb are varens. Arbeiden baksteen gesloten rug
-          zoo mijnbouw zes massa na zeker. Herhaling zuidgrens te al opgevoerd
-          nu mineralen er.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt iusto
-          exercitationem voluptatibus modi quae. Soluta, sit, expedita ducimus
-          consectetur odio quam illum quas corporis, provident totam impedit
-          voluptatibus officiis temporibus.
-        </p>
-        <input type="search" />
+      <!-- la section sera le background de mon modal-->
+      <!-- Je veuc que quand on ouvre le modal , cette section souvre -->
+      <div class="content_modal">
+        <button class="fermer_modal">&times;</button>
+        <h3>Exemples de déserts touristiques célèbres</h3>
+        <ul>
+          <li>
+            <strong>Sahara </strong> Plus grand désert chaud du monde, dunes de
+            Merzouga (Maroc), oasis, bivouacs, culture berbère et touarègue
+          </li>
+          <li>
+            <strong> Namib </strong> Dunes rouges géantes de Sossusvlei, faune
+            désertique (oryx, autruches), paysages lunaires
+          </li>
+          <li>
+            <strong>Kalahari </strong> Savane semi-aride, faune riche (lions,
+            suricates), culture des Bushmen
+          </li>
+          <li>
+            <strong> Désert du Ténéré </strong>Dunes dorées, anciennes routes
+            caravanières, lieu sacré du Sahara, solitude extrême
+          </li>
+          <li>
+            <strong> Désert du Danakil </strong>Un des endroits les plus chauds
+            et hostiles au monde, volcans actifs, lacs acides, formations
+            géologiques uniques
+          </li>
+        </ul>
       </div>
     </section>
   </body>

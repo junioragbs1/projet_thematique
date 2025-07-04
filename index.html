@@ -7,7 +7,7 @@
       src="https://kit.fontawesome.com/9dafe03bf9.js"
       crossorigin="anonymous"
     ></script>
-    <script src="JS/utilities.js" defer></script>
+    <script src="/JS/app_index.js" defer></script>
     <link
       rel="stylesheet"
       href="CSS/styleIndex.css"
@@ -19,22 +19,23 @@
   </head>
   <body>
     <div class="overlay"></div>
-    pour l'effet transparant noir au dessus de l'image ; je me suis aider de
-    l'IA pour le faire , je galerais tout seul .
     <header>
       <div class="entete">
         <div class="aceuil">
           <h1><a href="index.html" id="retour_acceuil">AfriKama</a></h1>
         </div>
+        <!-- on va cacher les liens dans la div nav-->
         <div class="nav">
           <a href="content.html" class="nav_link"> Destinations </a>
           <a href="contact.html" class="nav_link"> Contacts </a>
-          <a href=""> Reserver un appel </a>
+          <a href="#modal1" class="js_modal"> Reservation </a>
+          <!-- j'ai appliquer une class qui fait le lien avec le JS pour le modal -->
         </div>
-        <!-- <div class="toggle">
-          <i class="fa-solid fa-bars ouvrir"></i>
-          <i class="fa-solid fa-xmark fermer"></i>
-        </div> -->
+        <!-- le menu burger-->
+        <a href="#" class="icon">
+          <i class="fa-solid fa-bars"></i>
+          <!-- dans ce lien je mets , la fonction a executé , l'icone burger  le href veut dire que seul le JavaScript dans onclick est exécuté-->
+        </a>
       </div>
     </header>
     <section class="des_home">
@@ -43,6 +44,32 @@
         Explorez des destinations inoubliables, plongez dans la diversité
         culturelle et naturelle du continent africain.
       </p>
+    </section>
+    <section
+      id="modal1"
+      class="modal"
+      role="dialog"
+      aria-labelledby="titlemodal"
+      style="display: none"
+    >
+      <!-- la section qui s'afficher au clix du lien -->
+      <div class="modal_wrapper">
+        <!--c'est ici on mets le contenu du modal , la boite de dialigue  -->
+        <h2 id="titlemodal">Ons rekening fransche</h2>
+        <button class="close_modal">fermer le modal</button>
+
+        <p>
+          Kosten zoo mee sunger heb are varens. Arbeiden baksteen gesloten rug
+          zoo mijnbouw zes massa na zeker. Herhaling zuidgrens te al opgevoerd
+          nu mineralen er.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt iusto
+          exercitationem voluptatibus modi quae. Soluta, sit, expedita ducimus
+          consectetur odio quam illum quas corporis, provident totam impedit
+          voluptatibus officiis temporibus.
+        </p>
+      </div>
     </section>
   </body>
 </html>

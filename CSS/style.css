@@ -13,6 +13,11 @@
 
 body,
 html {
+  background-image: url("/imgs/bacground.jpeg");
+  background-size: cover; /* couvre toute la page*/
+  background-repeat: repeat; /* ne se repete pas */
+  background-attachment: fixed; /* Je rajoute un fixed ici pour que l'image en arriere plan ne bouge pas , ce qui cree un effet parralax*/
+  max-height: 900px;
   margin: 0.5em;
   font-family: sans-serif;
   height: 100%;
@@ -21,13 +26,23 @@ html {
 }
 
 a,
-h1 {
+h1,
+h2 {
   color: white;
   text-decoration: none;
   padding: 8px;
+  transition: color 0.3s ease;
 }
-.nav_link:hover {
+.nav_link:hover,
+h2:hover {
   color: #96a487;
+}
+.icon {
+  background: black;
+  display: none;
+  position: absolute; /* elle va s'afficher par rapport au header et va le serrer a droite et en haut */
+  right: 0;
+  top: 0;
 }
 .entete {
   display: flex;
@@ -107,7 +122,13 @@ img {
   font-size: 1.5em;
   margin-bottom: 1em;
   margin-top: 1em;
+  color: white;
 }
+.contact_us {
+  background-color: rgba(32, 32, 32, 0.5); /* couleur de fond */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ombre de la div */
+}
+
 .form input,
 textarea {
   padding: 10px;
@@ -115,28 +136,47 @@ textarea {
   border: 1px solid #ccc; /* bordure de l'input */
   box-shadow: 1px 1px 1px #999; /* ombre de l'input */
 }
+.form {
+  background-color: rgba(32, 32, 32, 0.5); /* couleur de fond */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ombre de la div */
+  border-radius: 5px;
+}
 
 details {
   border: 1px solid #aaa;
   border-radius: 4px;
   padding: 0.5em 0.5em 0;
   margin: 1.5em;
+  color: white;
+  background-color: rgba(32, 32, 32, 0.5); /* couleur de fond */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ombre de la div */
 }
 
 summary {
   font-weight: bold; /* le texte du summary sera en gras */
   margin: -0.5em -0.5em 0; /* pour que le texte du summary soit aligné avec le bord de la bordure */
   padding: 0.5em;
+  color: white;
+}
+
+li {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pieds .rs i {
-  color: black;
+  color: white;
 }
 
 .pieds {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: white;
 }
 .pieds .infos {
   word-spacing: 6px;
@@ -144,26 +184,47 @@ summary {
 .afterfooter {
   align-items: center;
   text-align: center;
+  color: white;
 }
 
-.modal {
-  position: fixed;
-  top: 0;
+/*****************/
+
+.mon_modal {
+  display: none; /* je le cache par defaut */
+  position: fixed; /*comme pour le background image , je mets fixed pour qu'elle ne bouge pas  */
+  z-index: 5; /* on le mets en avant */
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: auto; /* on pourra scroll si besoin */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
-.modal_wrapper {
-  max-width: 80vw;
-  /* calc(100vw-20px) */
-  max-height: 80vh;
-  overflow: scroll;
-  /*en cas de debordement une barre de scroll apparait  */
-  background-color: #fff;
-  width: 600px;
+
+.content_modal {
+  background-color: #fefefe;
+  margin: 20% auto; /* je le centre*/
   padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* 80% de la taillle d'écran */
 }
+.content_modal li {
+  padding: 0.4em;
+  margin: 0.2em;
+}
+
+.fermer_modal {
+  color: #aaa;
+  float: right;
+  font-size: 20px; /* on le fait flotter a droite de la div du content*/
+  font-weight: bold;
+}
+
+.fermer_modal:hover,
+.fermer_modal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* documentation w3Cschool*/

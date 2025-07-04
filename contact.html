@@ -7,6 +7,7 @@
       src="https://kit.fontawesome.com/9dafe03bf9.js"
       crossorigin="anonymous"
     ></script>
+    <script src="/JS/manager.js" defer></script>
     <link
       rel="stylesheet"
       href="CSS/style.css"
@@ -22,6 +23,7 @@
     <title>Contactez-Nous</title>
   </head>
   <body>
+    <div class="overlay"></div>
     <header class="entete">
       <div class="aceuil">
         <h1><a href="index.html" id="retour_acceuil">AfriKama</a></h1>
@@ -36,21 +38,33 @@
       <div class="contact_us">
         <h2>Contactez-Nous</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. delectus,
-          suscipit rem nemo numquam nulla blanditiis, eos at error.
+          Une question, un doute ou besoin d’aide ? Notre équipe est à votre
+          écoute pour vous accompagner rapidement et efficacement.
         </p>
       </div>
       <h2>Des questions ? Envoyez nous un messages:</h2>
 
-      <div class="form">
-        <input type="text" name="Nom" id="Nom" placeholder="Votre Nom:" />
+      <form class="form">
+        <input
+          type="text"
+          name="Nom"
+          id="Nom"
+          placeholder="Votre Nom:"
+          required
+        />
         <input
           type="text"
           name="Prenom"
           id="Prenom"
           placeholder="Votre préom:"
         />
-        <input type="email" name="Email" id="Email" placeholder="Email:" />
+        <input
+          type="email"
+          name="Email"
+          id="Email"
+          placeholder="Email:"
+          required
+        />
         <textarea
           placeholder="Votre message"
           id="story"
@@ -59,8 +73,16 @@
           cols="33"
         >
         </textarea>
-        <input class="Button" type="submit" value="Envoyer " />
-      </div>
+        <button
+          class="Button"
+          type="submit"
+          value="Confirmer"
+          onClick="ConfirmerAge()"
+        >
+          Envoyer
+        </button>
+      </form>
+      <!-- L'attibut required permet la validation basique du formulaire -->
 
       <h2>Questions frequentes :</h2>
       <div class="qf">
@@ -79,6 +101,10 @@
             minus ipsam pariatur!
           </p>
         </details>
+      </div>
+
+      <div class="domInsert">
+        <ul id="historique"></ul>
       </div>
     </main>
     <hr />

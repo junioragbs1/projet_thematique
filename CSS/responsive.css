@@ -69,3 +69,82 @@
     align-items: center;
   }
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  body,
+  html {
+    font-family: sans-serif; /* les polices de caracteres */
+    height: 100%; /* 100% de la hauteur de la page  */
+    font-size: 15px;
+    position: relative; /* l'element par rapport à laquelle l'element à la position absolute se positionne*/
+  }
+  .overlay {
+    position: absolute; /* la div overlay est la pour faire la surcouche tranparente noir */
+    top: 0; /* avec ce top , bottom , left et right il va coller les bords */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1; /* on le met au dessus de limage grace au z-index */
+  }
+  body {
+    background-image: url("/imgs/bacground.jpeg");
+    background-size: cover; /* couvre toute la page*/
+    background-repeat: no-repeat; /* ne se repete pas */
+  }
+  .des_home {
+    position: absolute; /* elle va se positionner par rapport au body*/
+    top: 42%;
+    left: 0%;
+    z-index: 10;
+    color: white;
+    font-size: large;
+    align-items: center;
+    text-align: center;
+  }
+  .entete {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    height: 10vh;
+  }
+  /* je cache les liens de la nav dans le header */
+  .nav {
+    display: none;
+  }
+  .Destinations,
+  .place_toBe {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    margin: 0 auto;
+    row-gap: 1em;
+  }
+  .activites {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    row-gap: 2em;
+    margin: 0 auto;
+  }
+  .pieds {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 0.3em;
+    align-items: center;
+    text-align: center;
+  }
+  .overlay {
+    position: absolute; /* la div overlay est la pour faire la surcouche tranparente noir */
+    top: 0; /* avec ce top , bottom , left et right il va coller les bords */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1; /* on le met au dessus de limage grace au z-index */
+  }
+}
